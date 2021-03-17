@@ -1,0 +1,15 @@
+.my-table{
+  height:100vw;
+}
+.row-btn{
+  margin-top: auto;
+}
+
+.img-proprietario{
+  max-width: 472.5px;
+  min-height: 960px;
+  opacity: 0.5
+}
+.col-3{
+  opacity: 0.75;
+}

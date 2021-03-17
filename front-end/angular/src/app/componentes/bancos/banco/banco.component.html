@@ -1,0 +1,20 @@
+<div class="my-table">
+  <h1 class="text-center" id="titulo_imovel">Bancos Parceiros</h1>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <table class="table table-hover text-center">
+        <tr>
+            <th scope="col">Nomes</th>
+        </tr>
+        <tr  *ngFor="let banco of bancos">
+            <td>{{ banco.nome }}</td>
+
+        </tr>
+        <button class="btn btn-success " routerLink="/menu">Voltar</button>
+      </table>
+
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>

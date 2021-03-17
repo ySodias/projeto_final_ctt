@@ -1,0 +1,42 @@
+<div class="my-table">
+  <h1 class="text-center" id="titulo_proprietario">Informações dos Proprietarios</h1>
+  <div class="row">
+    <div class="col-3" ></div>
+    <div class="col-6">
+      <div class="row">
+        <table class="table table-hover mx-auto">
+          <tr>
+              <th scope="col">Código do Proprietario</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Data de Nascimento</th>
+              <th scope="col">RG</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Estado Civil</th>
+              <th scope="col">Profissão</th>
+          </tr>
+          <tr  *ngFor="let proprietario of proprietarios">
+              <td>{{ proprietario.id_proprietario }} </td>
+              <td>{{ proprietario.nome }}  <a></a></td>
+              <td>{{ proprietario.data_de_nascimento | date: 'dd-MM-yyyy'}}</td>
+              <td>{{ proprietario.rg }}</td>
+              <td>{{ proprietario.cpf }}</td>
+              <td>{{ proprietario.estado_civil }}</td>
+              <td>{{ proprietario.profissao }}</td>
+
+          </tr>
+        </table>
+      </div>
+      <div class="row d-flex justify-content-center row-btn">
+        <div>
+          <button class="btn btn-success" routerLink='/get-imovel' >Voltar</button>
+          <input type="hidden" name="id_imovel" id="id_imovel"/>
+      </div>
+    </div>
+
+  </div>
+    <div class="col-3" ></div>
+
+
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="my-table">
+  <h1 class="text-center" id="titulo_imovel">Imóveis Disponíveis</h1>
+  <div class="row">
+
+    <table class="table table-hover">
+      <tr>
+          <th scope="col">Proprietario</th>
+          <th scope="col">Despesas</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Tipo de Residência</th>
+          <th scope="col">CEP</th>
+          <th scope="col">Endereço</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col">Data de aquisição</th>
+          <th scope="col"></th>
+
+      </tr>
+      <tr  *ngFor="let imovel of imovels">
+          <td routerLink="/get-proprietario">{{ imovel.id_proprietario }} </td>
+          <td routerLink="/get-despesas">{{ imovel.id_despesas }}  <a></a></td>
+          <td>{{ imovel.valor }}</td>
+          <td>{{ imovel.tipo_residencia }}</td>
+          <td>{{ imovel.cep }}</td>
+          <td>{{ imovel.rua }}</td>
+          <td>{{ imovel.numero }}</td>
+          <td>{{ imovel.cidade }}</td>
+          <td>{{ imovel.estado }}</td>
+          <td>{{ imovel.uf }}</td>
+          <td>{{ imovel.data_de_cadastro }}</td>
+          <td><button class="btn btn-success" >Comprar</button></td>
+          <input type="hidden" name="id_imovel" id="id_imovel" value="{{imovel.id_imovel}}"/>
+      </tr>
+    </table>
+  </div>
+  <div class="row d-flex center d-flex justify-content-center" ><button class="btn btn-success" routerLink="/menu">Voltar</button></div>
+
+
+</div>

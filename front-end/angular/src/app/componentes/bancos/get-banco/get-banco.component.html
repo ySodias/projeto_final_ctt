@@ -1,0 +1,28 @@
+<h2>Exibir um Banco</h2>
+<div>
+   <br>
+   <label>Id Pesquisado</label>
+    <input value="{{banco.id_banco}}" type="text"/> <br><br>
+
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col"></th>
+
+  </tr>
+
+   <tr *ngFor="let bank of banco">
+    <td>{{ bank.id_nome }}</td>
+    <td>{{ bank.nome }}
+    <input type="hidden" name="id_banco" id="id_banco" value="{{banco.id_banco}}" />
+    </td>
+</tr>
+
+</div>
+
+<br><br>
+
+<div style="width: 125px;">
+  <input type="button" value="Salvar"> &nbsp;|&nbsp; <input type="button" routerLink="/clientes" value="Voltar">
+</div>
+
+<br>

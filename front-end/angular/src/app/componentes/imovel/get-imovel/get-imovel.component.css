@@ -1,0 +1,16 @@
+.my-table{
+  margin:0;
+  padding:0;
+  height: 1980px;
+}
+#titulo_imovel{
+  font-size: 30px;
+  text-align: center;
+}
+
+.my-table{
+  display: inline;
+}
+.row{
+  padding-left: 1rem;
+}

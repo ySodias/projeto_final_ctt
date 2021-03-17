@@ -1,0 +1,37 @@
+<div class="my-table">
+  <h1 class="text-center" id="titulo_proprietario">Informações das Despesas</h1>
+  <div class="row">
+    <div class="col-3" ></div>
+    <div class="col-6">
+      <div class="row">
+        <table class="table table-hover mx-auto">
+          <tr>
+              <th scope="col">Código da Despesa </th>
+              <th scope="col">Conta de Luz</th>
+              <th scope="col">Conta de Água</th>
+              <th scope="col">Conta de Condomínio</th>
+              <th scope="col">Gastos com propaganda de pré-venda</th>
+          </tr>
+          <tr  *ngFor="let despesa of despesas">
+              <td>{{ despesa.id_despesas }} </td>
+              <td>{{ despesa.conta_luz }}  <a></a></td>
+              <td>{{ despesa.conta_agua }}</td>
+              <td>{{ despesa.conta_condominio }}</td>
+              <td>{{ despesa.propaganda_pre_venda }}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="row d-flex justify-content-center row-btn">
+        <div>
+          <button class="btn btn-success" routerLink='/get-imovel' >Voltar</button>
+          <input type="hidden" name="id_imovel" id="id_imovel"/>
+      </div>
+    </div>
+
+  </div>
+    <div class="col-3" ></div>
+
+
+
+  </div>
+</div>

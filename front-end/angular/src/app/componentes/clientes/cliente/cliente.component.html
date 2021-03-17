@@ -1,0 +1,43 @@
+<div>
+
+  <table class="table table-hover">
+    <tr>
+        <th scope="col">Código do Cliente</th>
+        <th scope="col">Código do Banco</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Data de nascimento</th>
+        <th scope="col">RG</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Estado Civil</th>
+        <th scope="col">Profisssão</th>
+        <th scope="col">Tipo de Residência</th>
+        <th scope="col">CEP</th>
+        <th scope="col">Endereço</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+
+    </tr>
+  <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.id_cliente }}</td>
+      <td>{{ cliente.id_banco }}</td>
+      <td>{{ cliente.nome }}</td>
+      <td>{{ cliente.data_de_nascimento }}</td>
+      <td>{{ cliente.rg }}</td>
+      <td>{{ cliente.cpf }}</td>
+      <td>{{ cliente.estado_civil }}</td>
+      <td>{{ cliente.profissao }}</td>
+      <td>{{ cliente.tipo_residencia }}</td>
+      <td>{{ cliente.cep }}</td>
+      <td>{{ cliente.rua }}</td>
+      <td>{{ cliente.cidade }}</td>
+      <td>{{ cliente.estado }}</td>
+      <td>{{ cliente.uf }}</td>
+      <button class="btn btn-danger" (click)="deleteCliente(cliente.id_cliente)">Delete</button>
+      <button class="btn btn-warning" [routerLink]="['/put-cliente', cliente.id_cliente]">Editar</button>
+      <input type="hidden" name="id_cliente" id="id_cliente" value="{{cliente.id_cliente}}"/>
+  </tr>
+  </table>
+</div>

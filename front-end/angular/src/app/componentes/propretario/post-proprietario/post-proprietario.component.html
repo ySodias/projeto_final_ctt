@@ -1,0 +1,44 @@
+<div class="container-fluid">
+
+  <h1 class="text-center">Cadatrar-se</h1>
+  <hr class="mt5 mb-5">
+  <div class="form-group">
+
+  <div class="form-group">
+    <label for="Nome">Nome</label>
+    <input #nome class="form-control" type="text" value="" name="nome" id="nome" placeholder="Digite seu Nome">
+  </div>
+
+  <div class="form-group">
+    <label for="data_de_nascimento">Data de Nascimento</label>
+    <input #data_de_nascimento class="form-control" type="date" id="data_de_nascimento" placeholder="Digite sua Data de Nascimento">
+  </div>
+
+  <div class="form-group">
+    <label for="rg">RG</label>
+    <input #rg class="form-control" type="text" name="rg" id="rg" placeholder="Digite seu RG">
+  </div>
+
+  <div class="form-group">
+    <label for="cpf">CPF</label>
+    <input #cpf class="form-control" type="text" name="cpf" id="cpf" placeholder="Digite seu CPF">
+  </div>
+
+  <div class="form-group">
+    <label for="estado_civil">Estado Civil</label>
+    <input #estado_civil class="form-control" type="text" name="estado_civil" id="estado_civil" placeholder="Digite seu Estado Civil">
+  </div>
+
+  <div class="form-group">
+    <label for="profissao">Profissão</label>
+    <input #profissao class="form-control" type="text" name="profissao" id="profissao" placeholder="Digite sua Profissão">
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-danger mr-4" routerLink='/menu'>Cancelar</button>
+    <button type="submit" class="btn btn-success" (click)="insereNovoProprietario(nome.value, data_de_nascimento.value, rg.value, cpf.value, estado_civil.value, profissao.value)"  routerLink='/get-imovel'>Cadastrar</button>
+  </div>
+
+  <hr class="mt5 mb-5">
+
+</div>
